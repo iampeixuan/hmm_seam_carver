@@ -1,2 +1,6 @@
 
 \.idea/
+
+\.ipynb_checkpoints/seam_carver_demo-checkpoint\.ipynb
+
+__pycache__/seam_carver\.cpython-36\.pyc

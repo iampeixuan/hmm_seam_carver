@@ -34,6 +34,7 @@ class SeamCarver:
                 self.delete_seam(seam_idx)
 
     def calc_energy_map(self):
+        # energy is calculated as the squared component-wise distance between 4 neighbours of the pixel
         b, g, r = cv2.split(self.out_image)
         b_energy = np.absolute(cv2.Scharr(b, -1, 1, 0)) + np.absolute(cv2.Scharr(b, -1, 0, 1))
         g_energy = np.absolute(cv2.Scharr(g, -1, 1, 0)) + np.absolute(cv2.Scharr(g, -1, 0, 1))
